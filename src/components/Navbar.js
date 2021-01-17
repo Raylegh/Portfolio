@@ -1,35 +1,40 @@
 import './Navbar.css';
-import React, {useState} from 'react';
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-//import { faTimes, faBars} from '@fortawesome/free-solid-svg-icons'
+import React from 'react';
 
-
-function Navbar() {
-    return(
-        <Navtittle>
-            <Navitem tittle='Projects'/>
-            <Navitem tittle='About'/>
-            <Navitem tittle='Contact'/>
-        </Navtittle>
+function Navbar(props){
+    return (
+        <nav className="nav-bar">
+            <NavTittle/>
+            <NavObjects>
+                <Navitem tittle='Projects'/>
+                <Navitem tittle='About'/>
+                <Navitem tittle='Contact'/>
+            </NavObjects>
+            <NavMenu/>           
+        </nav>
     )
 }
 
-function Navtittle(props){
-    return (
-        <nav className="nav-bar">
-            <div className="navbar-left">
-                <div className="navbar-tittle">
-                    <h4>Cristina Blanco</h4>
-                </div>
-                <div className="navbar-logo">
-                    <img className="navbar-logo-img" src="/images/logo.png" alt=""/>
-                </div>
+function NavTittle(){
+    return(
+        <div className="navbar-left">
+            <div className="navbar-tittle">
+                <h4>Cristina Blanco</h4>
             </div>
-            <div className="navbar-right">
-                <ul className="nav-links">{props.children}</ul>
+            <div className="navbar-logo">
+                <img className="navbar-logo-img" src="/images/logo.png" alt=""/>
             </div>
-            
-        </nav>
+        </div>
+    )
+}
+
+function NavObjects(props){
+    return(
+        <div className="navbar-right">
+            <ul className="nav-links">
+                {props.children}
+            </ul>
+        </div>   
     )
 }
 
@@ -43,12 +48,12 @@ function Navitem(props){
     )
 }
 
-function Navmenu(){
+function NavMenu(){
     return(
-        <div class="nav-menu">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+        <div className="nav-menu">
+            <div className="line1"></div>
+            <div className="line2"></div>
+            <div className="line3"></div>
         </div>
     )
 }

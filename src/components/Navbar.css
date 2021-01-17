@@ -1,6 +1,6 @@
 :root{
     --nav-width: 100px;
-    --bg: #3d3c3c;
+    --bg: #3c3d3d;
     --bg-accent: #484849;
     --text-color: #dbdbdb;
     --nav-size: 60px;
@@ -66,4 +66,45 @@
     letter-spacing: 4px;
     font-weight: normal;
     font-size: 14px;
+}
+
+.nav-menu{
+    display: none;
+    margin-right: 10%;
+}
+
+.nav-menu div{
+    width: 25px;
+    height: 3px;
+    background-color: #effcfc;
+    margin: 5px;
+    /* transition back to the animation */
+    transition: all 0.3s ease-out;
+}
+
+/* --- NAV MENU ANIMATION --- */ 
+@media screen and (max-width: 900px){
+   .nav-links{
+       position: absolute;
+       z-index: 1;
+       right: 0px;
+       height: 92vh;
+       top: 100px;
+       background-color: var(--bg);
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       width: 100%;
+       margin: 0;
+       transform: translateX(100%);
+       transition: all 0.5s ease-out;
+   }
+
+    .nav-links li{
+       opacity: 0;
+   }
+   .nav-menu{
+       display: block;
+       cursor: pointer;
+   } 
 }
