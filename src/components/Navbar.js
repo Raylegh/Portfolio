@@ -22,7 +22,7 @@ function NavTittle(){
                 <h4>Cristina Blanco</h4>
             </div>
             <div className="navbar-logo">
-                <img className="navbar-logo-img" src="/images/logo.png" alt=""/>
+                <img className="navbar-logo-img" src="/images/logo_white.png" alt=""/>
             </div>
         </div>
     )
