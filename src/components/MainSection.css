@@ -1,56 +1,54 @@
 :root{
-    --bg-main: rgba(248, 248, 248, 0.3);
-    --main-txt: rgb(50,50,50);
+    --main-bg: #3c3d3d;
+    --main-txt: #f2f5f8;
 }
 
 
 .main-section{
-    height: 92vh;
-    width: 100%;
-    background: var(--bg);
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-position:center;
-    object-fit: cover;
-    display: flex;
+    height: 90vh;
+    background: var(--main-bg);
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 5% 1fr 1fr 5%;
 }
 
 .main-about{
-    position: absolute;
-    right: 5%;
-    margin: 2% auto auto auto;
-    width: 50%;
-    height: 85vh;
-    /* margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 45%; */
-    width: 50%;
-    text-align: center;
-    color:var(--main-txt);
-    background: var(--bg-main);
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba (0,0,0,.5);
-    border-radius: 25px;
+   grid-column: 2/2;
+   margin: auto;
+   color: var(--main-txt);
+   font-family: 'Segoe UI';
+   font-weight: normal;
 }
 
-
-.main-button{
-    z-index: 0;
-    position: relative;
-    display: inline-block;
-    padding: 12px 36px;
-    margin: 15px 0;
-    height: 60px;
-    border: solid;
-    color: rgb(255, 255, 255);
-    border-color: rgb(63, 63, 63);
-    border-width: 2px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 13px;
-    letter-spacing: 2px;
-    border-radius: 10px;
-    box-shadow: 0 10px 15px rgba(0, 4, 7, 0.1);
-    background: rgb(144, 162, 196);
-    outline: none;
+.main-about h3{
+    font-size: 25px;
+    color: (var(--main-txt));
+    margin: 4%;
+    margin-left: 0;
+    font-weight: normal;
 }
+
+.main-about h1{
+    font-size: 40px;
+    color: #ffffff;
+    font-weight:bold;
+    margin: 1%;
+    margin-left: 0;
+}
+
+.main-about p{
+    color: (var(--main-txt));
+    font-size: 20px;
+    margin: 4%;
+    margin-left: 0%;
+}
+
+.main-photo{
+    overflow: hidden;
+    height: auto;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    width: 100%;
+}
+

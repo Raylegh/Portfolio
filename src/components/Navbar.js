@@ -13,6 +13,7 @@ function Navbar(props){
                 </div>
             </div>
             <NavObjects>
+                <Navitem tittle='Home'/>
                 <Navitem tittle='Projects'/>
                 <Navitem tittle='About'/>
                 <Navitem tittle='Contact'/>
