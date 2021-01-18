@@ -7,7 +7,7 @@
 .main-section{
     height: 92vh;
     width: 100%;
-    background-image: url('background2.jpg');
+    background: var(--bg);
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;

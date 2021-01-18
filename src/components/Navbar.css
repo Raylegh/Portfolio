@@ -25,8 +25,8 @@
     color: var(--text-color);
     width: auto;
     text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 20px;
+    letter-spacing: 2.5px;
+    font-size: 18px;
     margin: auto;
 }
 
@@ -98,6 +98,11 @@
        margin: 0;
        transform: translateX(100%);
        transition: all 0.5s ease-out;
+   }
+
+   .navbar-tittle{
+       font-size: 15px;
+       letter-spacing: 1.5px;
    }
 
     .nav-links li{

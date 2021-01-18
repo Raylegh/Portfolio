@@ -4,27 +4,25 @@ import React from 'react';
 function Navbar(props){
     return (
         <nav className="nav-bar">
-            <NavTittle/>
+            <div className="navbar-left">
+                <div className="navbar-tittle">
+                    <h4></h4>
+                </div>
+                <div className="navbar-logo">
+                    <img className="navbar-logo-img" src="/images/logo_white.png" alt=""/>
+                </div>
+            </div>
             <NavObjects>
                 <Navitem tittle='Projects'/>
                 <Navitem tittle='About'/>
                 <Navitem tittle='Contact'/>
             </NavObjects>
-            <NavMenu/>           
+            <div className="nav-menu">
+                <div className="line1"></div>
+                <div className="line2"></div>
+                <div className="line3"></div>  
+            </div>        
         </nav>
-    )
-}
-
-function NavTittle(){
-    return(
-        <div className="navbar-left">
-            <div className="navbar-tittle">
-                <h4>Cristina Blanco</h4>
-            </div>
-            <div className="navbar-logo">
-                <img className="navbar-logo-img" src="/images/logo_white.png" alt=""/>
-            </div>
-        </div>
     )
 }
 
@@ -48,14 +46,5 @@ function Navitem(props){
     )
 }
 
-function NavMenu(){
-    return(
-        <div className="nav-menu">
-            <div className="line1"></div>
-            <div className="line2"></div>
-            <div className="line3"></div>
-        </div>
-    )
-}
 
 export default Navbar
