@@ -8,7 +8,7 @@ function Mainwindows(){
                 <h3>Hi I'm Cristina</h3>
                 <h1>Fashion Designer & Digital Marketing</h1>
                 <p>Disciplinary designer, with great pasion for fashion design and stylism. Currently discovering my love for digital marketing.</p>
-                <button>Projects</button>
+                <a href="#"><span>Projects</span></a>
             </div> 
             <div className="main-photo">
                 <img src="/images/main.svg" alt=""/>
