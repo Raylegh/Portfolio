@@ -40,7 +40,7 @@ function NavObjects(props){
 function Navitem(props){
     return(
         <li className="nav-item">
-            <a href="#">
+            <a className="nav-item-cool" href="#">
                 {props.tittle}
             </a>
         </li>

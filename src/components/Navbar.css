@@ -2,6 +2,7 @@
     --nav-width: 10vh;
     --nav-bg: #3c3d3d;
     --nav-text-color: #dbdbdb;
+    --main-butt:  #ff9100;
 }
 
 .nav-bar{
@@ -49,20 +50,23 @@
 
 .nav-links{
     display: flex;
-    justify-content: space-around;      
+    justify-content: space-around;  
+    align-items: center;    
 }
 
 .nav-item{
     list-style: none;
+    margin-right: 25px;
 }
 
-.nav-item a{
+.nav-item-cool{
     color: var(--nav-text-color);
-    margin: 25px;
-    display: flex;
+    padding: 5px;
+    position: relative;
+    display: block;
     text-decoration: none;
+    text-align: center;
     letter-spacing: 4px;
-    font-weight: normal;
     font-size: 14px;
 }
 
@@ -77,7 +81,29 @@
     background-color: #effcfc;
     margin: 5px;
     /* transition back to the animation */
-    transition: all 0.3s ease-out;
+}
+
+/* Hover and animations */
+
+.nav-item-cool::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    background: var(--main-butt);  
+    overflow: hidden;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+
+.nav-item-cool:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+    z-index: 0;
 }
 
 /* --- NAV MENU ANIMATION --- */ 
