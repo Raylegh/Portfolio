@@ -1,0 +1,65 @@
+:root {
+  --main-bg: #302d2d;
+  --main-txt: white;
+  --nav-bg: #3c3d3d;
+  --main-butt: #ff9100;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1b1b1b;
+  font-family: "Segoe UI";
+}
+
+button {
+  font-weight: normal;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 3px solid var(--main-butt);
+  background: transparent;
+  color: var(--main-txt);
+  transition: all 0.5s ease;
+  font-family: "Segoe UI";
+  &:hover {
+    background-color: var(--main-butt);
+    color: white;
+  }
+}
+
+h2 {
+  font-weight: lighter;
+  font-size: 4rem;
+}
+h3 {
+  color: white;
+  font-size: 2rem;
+  font-weight: lighter;
+}
+h4 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+a {
+  font-size: 1.1rem;
+}
+span {
+  font-weight: normal;
+  color: var(--main-butt);
+}
+p {
+  font-weight: lighter;
+  padding: 3rem 0rem;
+  color: #cccccc;
+  font-size: 1.4rem;
+  line-height: 150%;
+}
+
+//Import sass styles to the app
+@import "./aboutMe";
+@import "./navbar";

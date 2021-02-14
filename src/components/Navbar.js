@@ -1,51 +1,28 @@
-import './Navbar.css';
-import React from 'react';
+//Images
+import logo from "../images/logo.png";
 
-function Navbar(props){
-    return (
-        <nav className="nav-bar">
-            <div className="navbar-left">
-                <div className="navbar-tittle">
-                    <h4></h4>
-                </div>
-                <div className="navbar-logo">
-                    <img className="navbar-logo-img" src="/images/logo_white.png" alt=""/>
-                </div>
-            </div>
-            <NavObjects>
-                <Navitem tittle='Home'/>
-                <Navitem tittle='Projects'/>
-                <Navitem tittle='About'/>
-                <Navitem tittle='Contact'/>
-            </NavObjects>
-            <div className="nav-menu">
-                <div className="line1"></div>
-                <div className="line2"></div>
-                <div className="line3"></div>  
-            </div>        
-        </nav>
-    )
+function Navbar() {
+  return (
+    <nav className="nav-bar">
+      <img src={logo} alt="logo" />
+
+      <div className="navbar-right">
+        <ul>
+          <Navitem tittle="About Me" />
+          <Navitem tittle="Projects" />
+          <Navitem tittle="Contact Me" />
+        </ul>
+      </div>
+    </nav>
+  );
 }
 
-function NavObjects(props){
-    return(
-        <div className="navbar-right">
-            <ul className="nav-links">
-                {props.children}
-            </ul>
-        </div>   
-    )
+function Navitem({ tittle }) {
+  return (
+    <li>
+      <a href="#">{tittle}</a>
+    </li>
+  );
 }
 
-function Navitem(props){
-    return(
-        <li className="nav-item">
-            <a className="nav-item-cool" href="#">
-                {props.tittle}
-            </a>
-        </li>
-    )
-}
-
-
-export default Navbar
+export default Navbar;

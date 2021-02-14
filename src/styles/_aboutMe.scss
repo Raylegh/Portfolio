@@ -1,0 +1,25 @@
+.main-section {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 10rem;
+  background: var(--main-bg);
+  color: var(--main-txt);
+  .main-about {
+    flex: 1;
+    padding-right: 5rem;
+    h2 {
+      font-weight: lighter;
+    }
+  }
+  .main-photo {
+    flex: 1;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 60vh;
+      object-fit: cover;
+    }
+  }
+}
