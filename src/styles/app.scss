@@ -33,27 +33,26 @@ button {
 }
 
 h2 {
-  font-weight: lighter;
+  font-weight: normal;
   font-size: 4rem;
 }
 h3 {
-  color: white;
   font-size: 2rem;
-  font-weight: lighter;
+  font-weight: normal;
 }
 h4 {
-  font-weight: bold;
+  font-weight: normal;
   font-size: 2rem;
 }
 a {
   font-size: 1.1rem;
 }
 span {
-  font-weight: normal;
+  font-weight: bold;
+  font-size: 4rem;
   color: var(--main-butt);
 }
 p {
-  font-weight: lighter;
   padding: 3rem 0rem;
   color: #cccccc;
   font-size: 1.4rem;
