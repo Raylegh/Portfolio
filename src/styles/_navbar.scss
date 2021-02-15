@@ -7,13 +7,16 @@
   background-color: var(--nav-bg);
   padding: 1rem 10rem;
   img {
-    height: 10vh;
+    height: 6.5vh;
     width: auto;
     object-fit: contain;
+    cursor: pointer;
   }
   a {
-    color: white;
     text-decoration: none;
+    position: relative;
+
+    padding: 0rem 0.1rem 0.5rem 0.1rem;
   }
   ul {
     display: flex;
@@ -21,28 +24,26 @@
   }
   li {
     padding-left: 10rem;
-    position: relative;
   }
-}
+  /*NavBar animation*/
+  a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--main-butt);
+    overflow: hidden;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+  }
 
-/*NavBar animation*/
-.nav-item-cool::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100px;
-  height: 2px;
-  background: var(--main-butt);
-  overflow: hidden;
-  z-index: -1;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.5s;
-}
-
-.nav-item-cool:hover::before {
-  transform: scaleX(1);
-  transform-origin: left;
-  z-index: 0;
+  a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+    z-index: 0;
+  }
 }

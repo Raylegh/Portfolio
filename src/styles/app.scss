@@ -1,8 +1,9 @@
 :root {
-  --main-bg: #302d2d;
+  --main-bg: #2b2c2c;
   --main-txt: white;
   --nav-bg: #3c3d3d;
-  --main-butt: #ff9100;
+  --main-butt: #ffbb00;
+  --p-text: #cccccc;
 }
 
 * {
@@ -12,8 +13,9 @@
 }
 
 body {
-  background: #1b1b1b;
-  font-family: "Segoe UI";
+  background: var(--main-bg);
+  font-family: "Poppins", sans-serif;
+  color: var(--main-txt);
 }
 
 button {
@@ -34,7 +36,7 @@ button {
 
 h2 {
   font-weight: normal;
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 h3 {
   font-size: 2rem;
@@ -42,23 +44,28 @@ h3 {
 }
 h4 {
   font-weight: normal;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 a {
-  font-size: 1.1rem;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: var(--main-txt);
 }
 span {
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: var(--main-butt);
 }
 p {
   padding: 3rem 0rem;
-  color: #cccccc;
+  color: var(--p-text);
   font-size: 1.4rem;
   line-height: 150%;
+  font-weight: lighter;
 }
 
 //Import sass styles to the app
-@import "./aboutMe";
+@import "./main";
 @import "./navbar";
+@import "./skills";
+@import "./about";
