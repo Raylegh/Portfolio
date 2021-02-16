@@ -1,8 +1,7 @@
 .skill-section {
   min-height: 60vh;
-  background-color: #303131;
-  display: block;
-  padding: 5rem 10rem;
+  // background-color: #303131;
+  padding: 5rem 20rem;
 
   .skill-title {
     text-align: center;
@@ -17,15 +16,14 @@
     float: left;
     width: 50%;
     margin-bottom: 40px;
-    padding-left: 35px;
-    padding-right: 35px;
+    padding: 0rem 2rem;
 
     .skill-info {
       align-items: center;
       height: 1.5rem;
     }
     h4 {
-      font-size: 1rem;
+      font-size: 14px;
       font-weight: bold;
       float: left;
       text-transform: uppercase;
@@ -35,7 +33,7 @@
       float: right;
     }
     span {
-      font-size: 1rem;
+      font-size: 14px;
       font-weight: bold;
     }
   }
@@ -55,7 +53,6 @@
       float: left;
       border-radius: 30px;
       background-color: var(--main-butt);
-      width: 95%;
     }
   }
 }
