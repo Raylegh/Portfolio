@@ -1,12 +1,61 @@
 .skill-section {
-  min-height: 40vh;
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  h2 {
-    padding: 0rem 0rem 5rem 10rem;
+  min-height: 60vh;
+  background-color: #303131;
+  display: block;
+  padding: 5rem 10rem;
+
+  .skill-title {
+    text-align: center;
+    padding-bottom: 5rem;
   }
+
   .skills {
-    padding: 0rem 10rem;
+    min-height: 40vh;
+  }
+  .skill {
+    position: relative;
+    float: left;
+    width: 50%;
+    margin-bottom: 40px;
+    padding-left: 35px;
+    padding-right: 35px;
+
+    .skill-info {
+      align-items: center;
+      height: 1.5rem;
+    }
+    h4 {
+      font-size: 1rem;
+      font-weight: bold;
+      float: left;
+      text-transform: uppercase;
+      color: var(--p-text);
+    }
+    .skill-val {
+      float: right;
+    }
+    span {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+
+  .skill-but {
+    margin-top: 5px;
+    height: 1.5rem;
+    .skill-hold {
+      background-color: #999999;
+      display: block;
+      height: 8px;
+      width: 100%;
+      border-radius: 30px;
+    }
+    .skill-bar {
+      height: 8px;
+      float: left;
+      border-radius: 30px;
+      background-color: var(--main-butt);
+      width: 95%;
+    }
   }
 }
