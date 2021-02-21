@@ -1,26 +1,29 @@
 //Images
 import logo from "../images/logo.png";
+//Router
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <nav className="nav-bar">
-      <img src={logo} alt="logo" />
-
+      <Link to="/">
+        <img src={logo} alt="logo" />
+      </Link>
       <div className="navbar-right">
         <ul>
-          <Navitem tittle="About Me" />
-          <Navitem tittle="Projects" />
-          <Navitem tittle="Contact Me" />
+          <Navitem route="/" tittle="About Me" />
+          <Navitem route="/projects" tittle="Projects" />
+          <Navitem route="/contact" tittle="Contact Me" />
         </ul>
       </div>
     </nav>
   );
 }
 
-function Navitem({ tittle }) {
+function Navitem({ route, tittle }) {
   return (
     <li>
-      <a href="#">{tittle}</a>
+      <Link to={route}>{tittle}</Link>
     </li>
   );
 }

@@ -12,7 +12,7 @@
     object-fit: contain;
     cursor: pointer;
   }
-  a {
+  li a {
     text-decoration: none;
     position: relative;
 
@@ -26,7 +26,7 @@
     padding-left: 10rem;
   }
   /*NavBar animation*/
-  a::before {
+  li a::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -41,7 +41,7 @@
     transition: transform 0.5s;
   }
 
-  a:hover::before {
+  li a:hover::before {
     transform: scaleX(1);
     transform-origin: left;
     z-index: 0;
