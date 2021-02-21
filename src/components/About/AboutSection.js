@@ -6,16 +6,16 @@ import FashionIcon from "../../images/fashion.png";
 function AboutSection() {
   return (
     <div className="about-main">
-      <div class="about-description">
+      <div className="about-description">
         <div className="about-tittle">
           <h2>
             About <span>Me</span>
           </h2>
           <p>
-            Cristina Blanco Fábrega, 1996, Barcelona, España. <brb />
-            Diseñadora de Moda y Accesorios, Estilista en Publicidad, Artes
-            Escénicas y Producciones, y actualemente también estudiante de
-            Marketing Digital y Comercio Electónico.
+            Cristina Blanco Fábrega, 1996, Barcelona, España. Diseñadora de Moda
+            y Accesorios, Estilista en Publicidad, Artes Escénicas y
+            Producciones, y actualemente también estudiante de Marketing Digital
+            y Comercio Electónico.
           </p>
         </div>
         <div className="about-cards">

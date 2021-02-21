@@ -1,5 +1,6 @@
-//Styles for keyframes
-import styled, { keyframes } from "styled-components";
+//Animations
+import { SkillScroll } from "./useScroll";
+import { motion } from "framer-motion";
 
 const SkillsSection = () => {
   return (
@@ -25,18 +26,11 @@ const SkillsSection = () => {
 
 const Skills = ({ skill, note }) => {
   //Skill Animation
-  const SkillKey = keyframes`
-    from {
-      width: 0%;
-    }
-    to {
-      width: ${note};
-    }
-  `;
-  const SkillAnimation = styled.div`
-    animation: ${SkillKey} 2s; /* works */
-    width: ${note};
-  `;
+  const skillAnim = {
+    hidden: { width: "0%" },
+    show: { width: note, transition: { duration: 1 } },
+  };
+  const [element, controls] = SkillScroll();
 
   return (
     <div className="skill">
@@ -48,7 +42,13 @@ const Skills = ({ skill, note }) => {
       </div>
       <div className="skill-but">
         <div className="skill-hold">
-          <SkillAnimation className="skill-bar"></SkillAnimation>
+          <motion.div
+            variants={skillAnim}
+            animate={controls}
+            initial="hidden"
+            ref={element}
+            className="skill-bar"
+          ></motion.div>
         </div>
       </div>
     </div>

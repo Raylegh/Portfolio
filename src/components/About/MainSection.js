@@ -3,7 +3,7 @@ import MainImage from "../../images/test2.jpg";
 function MainSection() {
   return (
     <div className="main-section">
-      <div class="main-about">
+      <div className="main-about">
         <h3>Hi I'm Cristina</h3>
         <h2>
           Fashion<span> Designer</span> & Digital <span>Marketing</span>{" "}
