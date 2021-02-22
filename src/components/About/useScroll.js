@@ -16,7 +16,7 @@ import { useAnimation } from "framer-motion";
 export const SkillScroll = () => {
   const controls = useAnimation();
   const [element, view] = useInView({ threshold: 0.5, triggerOnce: true });
-  console.log(view);
+
   if (view) {
     controls.start("show");
   } else {

@@ -3,9 +3,9 @@ import AboutImage from "../../images/about.png";
 import MarketingIcon from "../../images/marketing.png";
 import FashionIcon from "../../images/fashion.png";
 
-function AboutSection() {
+function AboutSection({ forwardedRef }) {
   return (
-    <div className="about-main">
+    <div ref={forwardedRef} className="about-main">
       <div className="about-description">
         <div className="about-tittle">
           <h2>

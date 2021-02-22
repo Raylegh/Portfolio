@@ -25,12 +25,13 @@ const SkillsSection = () => {
 };
 
 const Skills = ({ skill, note }) => {
+  const [element, controls] = SkillScroll();
+
   //Skill Animation
   const skillAnim = {
     hidden: { width: "0%" },
     show: { width: note, transition: { duration: 1 } },
   };
-  const [element, controls] = SkillScroll();
 
   return (
     <div className="skill">

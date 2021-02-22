@@ -1,6 +1,12 @@
 import MainImage from "../../images/test2.jpg";
 
-function MainSection() {
+function MainSection({ buttRef }) {
+  //Button scrolling
+  const executeScroll = () => buttRef.current.scrollIntoView();
+  // const executeScroll = () => {
+  //   console.log(buttRef.current);
+  // };
+
   return (
     <div className="main-section">
       <div className="main-about">
@@ -12,7 +18,7 @@ function MainSection() {
           I'm a disciplinary designer, with great pasion for fashion design and
           stylism. Currently discovering my love for digital marketing.
         </p>
-        <button>Read More</button>
+        <button onClick={executeScroll}>Read More</button>
       </div>
       <div className="main-photo">
         <img src={MainImage} alt="profile" />
