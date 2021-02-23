@@ -1,6 +1,10 @@
+import { useState } from "react";
 //Animations
 import { SkillScroll } from "./useScroll";
 import { motion } from "framer-motion";
+//Counter Animation
+import CountUp from "react-countup";
+import VisibilitySensor, { startAnimation } from "react-visibility-sensor";
 
 const SkillsSection = () => {
   return (
@@ -11,14 +15,14 @@ const SkillsSection = () => {
         </h2>
       </div>
       <div className="skills">
-        <Skills skill="Photoshop" note="90%" />
-        <Skills skill="Illustrator" note="95%" />
-        <Skills skill="InDesign" note="80%" />
-        <Skills skill="Clo 3D" note="75%" />
-        <Skills skill="WGSN" note="35%" />
-        <Skills skill="Google ADS" note="55%" />
-        <Skills skill="Facebook ADS" note="65%" />
-        <Skills skill="Google Analytics" note="40%" />
+        <Skills skill="Photoshop" note="90" />
+        <Skills skill="Illustrator" note="95" />
+        <Skills skill="InDesign" note="80" />
+        <Skills skill="Clo 3D" note="75" />
+        <Skills skill="WGSN" note="35" />
+        <Skills skill="Google ADS" note="55" />
+        <Skills skill="Facebook ADS" note="65" />
+        <Skills skill="Google Analytics" note="40" />
       </div>
     </div>
   );
@@ -30,7 +34,14 @@ const Skills = ({ skill, note }) => {
   //Skill Animation
   const skillAnim = {
     hidden: { width: "0%" },
-    show: { width: note, transition: { duration: 1 } },
+    show: { width: note + "%", transition: { duration: 1 } },
+  };
+
+  const [focus, setFocus] = useState(false);
+  const skillsVisibleHandler = (isVisible) => {
+    if (isVisible) {
+      setFocus(true);
+    }
   };
 
   return (
@@ -38,7 +49,16 @@ const Skills = ({ skill, note }) => {
       <div className="skill-info">
         <h4>{skill}</h4>
         <div className="skill-val">
-          <span>{note}</span>
+          {/* Counter animation */}
+          <CountUp start={focus ? 0 : null} end={note} duration={2} suffix=" %">
+            {({ countUpRef }) => (
+              <VisibilitySensor
+                onChange={(isVisible) => skillsVisibleHandler(isVisible)}
+              >
+                <span className="note" ref={countUpRef} />
+              </VisibilitySensor>
+            )}
+          </CountUp>
         </div>
       </div>
       <div className="skill-but">

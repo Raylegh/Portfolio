@@ -1,5 +1,7 @@
 //Styles
 import "./styles/app.scss";
+//Style nav correciton
+import ScrollTop from "./components/ScrollTop";
 //Pages
 import Navbar from "./components/Navbar";
 import AboutMe from "./pages/AboutMe.js";
@@ -12,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <ScrollTop />
       <Switch location={location} key={location.pathname}>
         <Route path="/" exact>
           <AboutMe />

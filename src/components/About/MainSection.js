@@ -2,7 +2,8 @@ import MainImage from "../../images/test2.jpg";
 
 function MainSection({ buttRef }) {
   //Button scrolling
-  const executeScroll = () => buttRef.current.scrollIntoView();
+  const executeScroll = () =>
+    buttRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
   // const executeScroll = () => {
   //   console.log(buttRef.current);
   // };

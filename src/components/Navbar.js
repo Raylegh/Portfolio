@@ -1,7 +1,7 @@
 //Images
 import logo from "../images/logo.png";
 //Router
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -21,9 +21,18 @@ function Navbar() {
 }
 
 function Navitem({ route, tittle }) {
+  const { pathname } = useLocation();
+
   return (
     <li>
-      <Link to={route}>{tittle}</Link>
+      <Link
+        style={{
+          color: pathname === route ? "#ffbb00" : "",
+        }}
+        to={route}
+      >
+        {tittle}
+      </Link>
     </li>
   );
 }
