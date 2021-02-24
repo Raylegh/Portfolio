@@ -1,11 +1,17 @@
 .skill-section {
   min-height: 60vh;
-  // background-color: #303131;
-  padding: 5rem 20rem;
+  background-color: #303131;
+  padding: 5rem 25rem;
 
   .skill-title {
     text-align: center;
     padding-bottom: 5rem;
+    h2 {
+      font-size: 3rem;
+    }
+    span {
+      font-size: 3rem;
+    }
   }
 
   .skills {

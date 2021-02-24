@@ -4,7 +4,7 @@ import { SkillScroll } from "./useScroll";
 import { motion } from "framer-motion";
 //Counter Animation
 import CountUp from "react-countup";
-import VisibilitySensor, { startAnimation } from "react-visibility-sensor";
+import VisibilitySensor from "react-visibility-sensor";
 
 const SkillsSection = () => {
   return (
@@ -34,7 +34,7 @@ const Skills = ({ skill, note }) => {
   //Skill Animation
   const skillAnim = {
     hidden: { width: "0%" },
-    show: { width: note + "%", transition: { duration: 1 } },
+    show: { width: note + "%", transition: { duration: 2 } },
   };
 
   const [focus, setFocus] = useState(false);
@@ -50,7 +50,7 @@ const Skills = ({ skill, note }) => {
         <h4>{skill}</h4>
         <div className="skill-val">
           {/* Counter animation */}
-          <CountUp start={focus ? 0 : null} end={note} duration={2} suffix=" %">
+          <CountUp start={focus ? 0 : null} end={note} duration={2.5} suffix=" %">
             {({ countUpRef }) => (
               <VisibilitySensor
                 onChange={(isVisible) => skillsVisibleHandler(isVisible)}
