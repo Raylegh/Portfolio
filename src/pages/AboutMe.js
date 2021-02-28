@@ -4,7 +4,6 @@ import React, { useRef } from "react";
 import MainSection from "../components/About/MainSection";
 import SkillsSection from "../components/About/SkillsSection";
 import AboutSection from "../components/About/AboutSection";
-import Cards from "../components/About/Cards";
 
 function AboutMe() {
   //Scroll Button ref
@@ -15,7 +14,6 @@ function AboutMe() {
       <MainSection buttRef={buttRef} />
       <AboutSection forwardedRef={buttRef} />
       <SkillsSection />
-      <Cards />
     </>
   );
 }

@@ -15,14 +15,14 @@ const SkillsSection = () => {
         </h2>
       </div>
       <div className="skills">
-        <Skills skill="Photoshop" note="90" />
-        <Skills skill="Illustrator" note="95" />
-        <Skills skill="InDesign" note="80" />
-        <Skills skill="Clo 3D" note="75" />
-        <Skills skill="WGSN" note="35" />
-        <Skills skill="Google ADS" note="55" />
-        <Skills skill="Facebook ADS" note="65" />
-        <Skills skill="Google Analytics" note="40" />
+        <Skills skill="Photoshop" note={90} />
+        <Skills skill="Illustrator" note={80} />
+        <Skills skill="InDesign" note={90} />
+        <Skills skill="Clo 3D" note={75} />
+        <Skills skill="WGSN" note={65} />
+        <Skills skill="Google ADS" note={88} />
+        <Skills skill="Facebook ADS" note={74} />
+        <Skills skill="Google Analytics" note={77} />
       </div>
     </div>
   );
@@ -38,11 +38,11 @@ const Skills = ({ skill, note }) => {
   };
 
   const [focus, setFocus] = useState(false);
-  const skillsVisibleHandler = (isVisible) => {
-    if (isVisible) {
-      setFocus(true);
-    }
-  };
+  // const skillsVisibleHandler = (isVisible) => {
+  //   if (isVisible) {
+  //     setFocus(true);
+  //   }
+  // };
 
   return (
     <div className="skill">
@@ -50,10 +50,19 @@ const Skills = ({ skill, note }) => {
         <h4>{skill}</h4>
         <div className="skill-val">
           {/* Counter animation */}
-          <CountUp start={focus ? 0 : null} end={note} duration={2.5} suffix=" %">
+          <CountUp
+            start={focus ? 0 : null}
+            end={note}
+            duration={2.5}
+            suffix=" %"
+          >
             {({ countUpRef }) => (
               <VisibilitySensor
-                onChange={(isVisible) => skillsVisibleHandler(isVisible)}
+                onChange={(isVisible) => {
+                  if (isVisible) {
+                    setFocus(true);
+                  }
+                }}
               >
                 <span className="note" ref={countUpRef} />
               </VisibilitySensor>

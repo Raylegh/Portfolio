@@ -32,7 +32,7 @@ html {
 
 body {
   background: var(--main-bg);
-  font-family: "Poppins", sans-serif;
+  font-family: Poppins;
   color: var(--main-txt);
 }
 
@@ -45,7 +45,8 @@ button {
   background: transparent;
   color: var(--main-txt);
   transition: all 0.5s ease;
-  font-family: "Segoe UI";
+  font-family: Poppins;
+  border-radius: 50px;
   &:hover {
     background-color: var(--main-butt);
     color: white;
@@ -66,7 +67,7 @@ h4 {
 }
 a {
   font-size: 14px;
-  font-weight: bold;
+  font-weight: normal;
   letter-spacing: 0.5px;
   color: var(--main-txt);
 }
