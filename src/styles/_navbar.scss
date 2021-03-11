@@ -1,5 +1,5 @@
 .nav-bar {
-  height: 10vh;
+  height: 90px;
   display: flex;
   margin: auto;
   justify-content: space-between;
@@ -10,7 +10,7 @@
   top: 0;
   z-index: 10;
   img {
-    height: 6.5vh;
+    height: 50px;
     width: auto;
     object-fit: contain;
     cursor: pointer;

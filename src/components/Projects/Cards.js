@@ -1,8 +1,7 @@
-//import images
-import project1 from "../../images/project1.jpg";
-import project2 from "../../images/project2.jpg";
-import project3 from "../../images/project3.jpg";
-import project4 from "../../images/project4.jpg";
+import project1 from "../../images/projects/project1.jpg";
+import project2 from "../../images/projects/project2.jpg";
+import project3 from "../../images/projects/project3.jpg";
+import project4 from "../../images/projects/project4.jpg";
 
 const Cards = () => {
   return (
@@ -16,21 +15,21 @@ const Cards = () => {
         </div>
       </div>
       <div className="card-container">
-        <Card image={project1} type="Stylisim" title="Fucking Young" />
-        <Card image={project2} type="Stylisim" title="Wabi-Sabi" />
-        <Card image={project3} type="Stylisim" title="Outsider" />
-        <Card image={project4} type="Stylisim" title="Riot" />
+        <Card image={project1} imagetype="Stylisim" title="Fucking Young" />
+        <Card image={project2} imagetype="Stylisim" title="Fucking Young" />
+        <Card image={project3} imagetype="Stylisim" title="Fucking Young" />
+        <Card image={project4} imagetype="Stylisim" title="Fucking Young" />
       </div>
     </div>
   );
 };
 
-const Card = ({ image, title, type }) => {
+const Card = ({ image, title, imagetype }) => {
   return (
     <div className="card">
       <img src={image} alt="style" />
       <div className="card-content">
-        <h5>{type}</h5>
+        <h5>{imagetype}</h5>
         <h3>{title}</h3>
       </div>
     </div>
