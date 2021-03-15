@@ -1,26 +1,58 @@
+import { app } from "../../base";
+import { useState, useEffect } from "react";
+
 import project1 from "../../images/projects/project1.jpg";
-import project2 from "../../images/projects/project2.jpg";
-import project3 from "../../images/projects/project3.jpg";
-import project4 from "../../images/projects/project4.jpg";
+// import project2 from "../../images/projects/project2.jpg";
+// import project3 from "../../images/projects/project3.jpg";
+// import project4 from "../../images/projects/project4.jpg";
 
 const Cards = () => {
+  const [projects, setProjects] = useState([]);
+  const storageRef = app.storage().ref("images");
+
+  const displayImage = (imageRef) => {
+    imageRef.getDownloadURL().then(function (url) {
+      setProjects((projects) => [...projects, url]);
+    });
+  };
+
+  useEffect(() => {
+    storageRef.listAll().then(function (result) {
+      result.items.forEach(function (imageRef) {
+        displayImage(imageRef);
+      });
+    });
+  }, []);
+
+  console.log(projects);
+
   return (
-    <div className="card-section">
-      <div className="title-center">
-        <div className="card-title">
-          <h2>
-            Latest <span>Works</span>
-          </h2>
-          <div className="line" />
+    <>
+      {projects && (
+        <div className="card-section">
+          <div className="title-center">
+            <div className="card-title">
+              <h2>
+                Latest <span>Works</span>
+              </h2>
+              <div className="line" />
+            </div>
+          </div>
+          <div className="card-container">
+            {/* <Card image={project1} imagetype="Stylisim" title="Fucking Young" /> */}
+            {projects.map((project) => {
+              return (
+                <Card
+                  image={project}
+                  imagetype="Stylisim"
+                  title="Fucking Young"
+                />
+              );
+            })}
+          </div>
         </div>
-      </div>
-      <div className="card-container">
-        <Card image={project1} imagetype="Stylisim" title="Fucking Young" />
-        <Card image={project2} imagetype="Stylisim" title="Fucking Young" />
-        <Card image={project3} imagetype="Stylisim" title="Fucking Young" />
-        <Card image={project4} imagetype="Stylisim" title="Fucking Young" />
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 
