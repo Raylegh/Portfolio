@@ -1,11 +1,6 @@
 import { app } from "../../base";
 import { useState, useEffect } from "react";
 
-import project1 from "../../images/projects/project1.jpg";
-// import project2 from "../../images/projects/project2.jpg";
-// import project3 from "../../images/projects/project3.jpg";
-// import project4 from "../../images/projects/project4.jpg";
-
 const Cards = () => {
   const [projects, setProjects] = useState([]);
   const storageRef = app.storage().ref("images");
