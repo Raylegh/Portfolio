@@ -47,10 +47,20 @@ button {
   transition: all 0.5s ease;
   font-family: Poppins;
   border-radius: 50px;
+  outline: none;
   &:hover {
     background-color: var(--main-butt);
     color: white;
   }
+}
+
+input,
+textarea {
+  font-family: Poppins;
+  background: #303131;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
 }
 
 h2 {
@@ -90,3 +100,4 @@ p {
 @import "./skills";
 @import "./about";
 @import "./cards";
+@import "./contact";

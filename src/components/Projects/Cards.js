@@ -1,5 +1,6 @@
 import { app } from "../../base";
 import { useState, useEffect } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const Cards = () => {
   const [projects, setProjects] = useState([]);
@@ -19,8 +20,6 @@ const Cards = () => {
     });
   }, []);
 
-  console.log(projects);
-
   return (
     <>
       {projects && (
@@ -38,6 +37,7 @@ const Cards = () => {
             {projects.map((project) => {
               return (
                 <Card
+                  key={uuidv4()}
                   image={project}
                   imagetype="Stylisim"
                   title="Fucking Young"

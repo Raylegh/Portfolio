@@ -1,0 +1,121 @@
+//Title
+
+.contact-section {
+  min-height: 60vh;
+  padding: 5rem 20rem;
+
+  .contact-center {
+    display: flex;
+    justify-content: center;
+  }
+  .contact-title {
+    padding-bottom: 5rem;
+    h2 {
+      font-size: 3rem;
+    }
+    .line {
+      height: 5px;
+      margin-left: 25%;
+      width: 50%;
+      margin-top: 1rem;
+      background-color: var(--main-butt);
+    }
+    span {
+      font-size: 3rem;
+    }
+  }
+
+  //Icons
+  .msg-section {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon-section {
+      padding: 25px;
+      padding-left: 20px;
+      border-radius: 6px;
+      background: #303131;
+      width: 22rem;
+      margin: 0 15px;
+    }
+
+    .icon-msg {
+      display: flex;
+    }
+
+    .icon {
+      color: var(--main-butt);
+    }
+
+    h5 {
+      font-weight: bold;
+      padding: 0rem;
+      margin-left: 23px;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    p {
+      padding: 0rem;
+      padding-top: 1rem;
+      margin-bottom: 0;
+      color: #fff;
+      margin-left: 55px;
+      font-size: 16px;
+    }
+  }
+
+  //Inputs
+  .contact-form {
+    margin-top: 50px;
+
+    .contact-form-data {
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-data {
+      position: relative;
+      width: 100%;
+      min-height: 1px;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+
+    .contact-msg {
+      position: relative;
+      width: 100%;
+      min-height: 1px;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    input {
+      width: 100%;
+      padding: 20px 35px;
+      margin-bottom: 20px;
+    }
+    textarea {
+      width: 100%;
+      padding: 30px 35px;
+      margin-bottom: 20px;
+      height: 160px;
+      overflow: hidden;
+      resize: none;
+    }
+  }
+
+  .button-submit {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 15px;
+  }
+  button {
+    background-color: var(--main-butt);
+    font-size: 14px;
+  }
+}

@@ -6,6 +6,7 @@ import ScrollTop from "./components/ScrollTop";
 import Navbar from "./components/Navbar";
 import AboutMe from "./pages/AboutMe.js";
 import Projects from "./pages/Projects.js";
+import ContactMe from "./pages/ContactMe.js";
 //Router
 import { Switch, Route, useLocation } from "react-router-dom";
 
@@ -22,6 +23,9 @@ function App() {
         </Route>
         <Route path="/projects" exact>
           <Projects />
+        </Route>
+        <Route path="/contact" exact>
+          <ContactMe />
         </Route>
       </Switch>
     </div>
