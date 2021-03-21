@@ -12,6 +12,20 @@
       font-size: 3rem;
     }
   }
+
+  //Button
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 2rem;
+    padding-right: 3rem;
+
+    .job-button {
+      background-color: var(--main-butt);
+      font-size: 14px;
+    }
+  }
 }
 
 .job-life {

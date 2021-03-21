@@ -1,4 +1,5 @@
 import jobs from "./jobs";
+import resume from "../../files/resume.pdf";
 
 const JobSection = () => {
   const jobsList = jobs();
@@ -23,6 +24,11 @@ const JobSection = () => {
           />
         ))}
       </div>
+      <form method="get" action={resume}>
+        <button className="job-button" type="submit">
+          Resume
+        </button>
+      </form>
     </div>
   );
 };
