@@ -87,7 +87,6 @@ span {
   color: var(--main-butt);
 }
 p {
-  padding: 3rem 0rem;
   color: var(--p-text);
   font-size: 1.4rem;
   line-height: 150%;
@@ -98,6 +97,7 @@ p {
 @import "./main";
 @import "./navbar";
 @import "./skills";
+@import "./jobs";
 @import "./about";
 @import "./cards";
 @import "./contact";

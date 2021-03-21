@@ -38,11 +38,6 @@ const Skills = ({ skill, note }) => {
   };
 
   const [focus, setFocus] = useState(false);
-  // const skillsVisibleHandler = (isVisible) => {
-  //   if (isVisible) {
-  //     setFocus(true);
-  //   }
-  // };
 
   return (
     <div className="skill">

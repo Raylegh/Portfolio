@@ -9,6 +9,7 @@ import {
   faInstagram,
   faFacebook,
   faTwitter,
+  faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
 const ContactData = () => {
@@ -50,11 +51,11 @@ const ContactData = () => {
               icon={faInstagram}
             />
           </a>
-          <a href="">
+          <a href="https://www.linkedin.com/in/cristina-blanco-f%C3%A0brega-656861170/?originalSubdomain=es">
             <FontAwesomeIcon
               size="3x"
               className="icon-social"
-              icon={faFacebook}
+              icon={faLinkedin}
             />
           </a>
           <a href="">
