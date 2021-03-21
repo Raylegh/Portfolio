@@ -43,17 +43,27 @@ const ContactData = () => {
             <FontAwesomeIcon size="2x" className="icon" icon={faUsers} />
             <h5>See me on socials</h5>
           </div>
-          <FontAwesomeIcon
-            size="3x"
-            className="icon-social icon-first"
-            icon={faInstagram}
-          />
-          <FontAwesomeIcon
-            size="3x"
-            className="icon-social"
-            icon={faFacebook}
-          />
-          <FontAwesomeIcon size="3x" className="icon-social" icon={faTwitter} />
+          <a href="https://www.instagram.com/criis_lien/">
+            <FontAwesomeIcon
+              size="3x"
+              className="icon-social icon-first"
+              icon={faInstagram}
+            />
+          </a>
+          <a href="">
+            <FontAwesomeIcon
+              size="3x"
+              className="icon-social"
+              icon={faFacebook}
+            />
+          </a>
+          <a href="">
+            <FontAwesomeIcon
+              size="3x"
+              className="icon-social"
+              icon={faTwitter}
+            />
+          </a>
         </div>
       </div>
     </>

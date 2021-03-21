@@ -23,19 +23,6 @@ const useForm = (callback, validate) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    //add firestore database
-
-    const db = app.database();
-    //db.ref("messeages").orderByKey().limitToLast();
-    db.ref("messeages").push(values);
-
-    // database.collection("contacts").add({
-    //   name: values.name,
-    //   email: values.email,
-    //   subject: values.subject,
-    //   messeage: values.messeage,
-    // });
-
     setErrors(validate(values));
     setIsSubmitting(true);
   };
@@ -43,6 +30,9 @@ const useForm = (callback, validate) => {
   useEffect(() => {
     if (Object.keys(errors).length === 0 && isSubmitting) {
       callback();
+      //add firestore database
+      const db = app.database();
+      db.ref("messeages").push(values);
     }
   }, [errors]);
 

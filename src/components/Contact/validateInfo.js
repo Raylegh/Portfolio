@@ -8,14 +8,14 @@ export default function validateInfo(values) {
   if (!values.email) {
     errors.email = "Email required";
   } else if (!/\S+@\S+\.\S+/.test(values.email)) {
-    errors.email = "Email address is invalid";
+    errors.email = "Email address invalid";
   }
   if (!values.subject) {
-    errors.subject = "Subject is required";
+    errors.subject = "Subject required";
   }
 
   if (!values.messeage) {
-    errors.messeage = "Measseage is required";
+    errors.messeage = "Measseage required";
   }
 
   return errors;
