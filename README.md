@@ -8,5 +8,3 @@ Porftolio made with:
 <br/>
 <br/>
 
-
-Also animated using framer motion 😋
