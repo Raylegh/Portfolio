@@ -80,3 +80,40 @@
     transition: 0.5s;
   }
 }
+
+//Card Pages
+.card-page-container {
+  img {
+    transition: transform 0.5s ease;
+  }
+  .card {
+    cursor: pointer;
+  }
+}
+.modal {
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+
+  img {
+    height: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: all 0.25s ease-out;
+  }
+}
+.modal-open {
+  opacity: 1;
+  pointer-events: all;
+
+  .img-open {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

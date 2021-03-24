@@ -11,23 +11,29 @@ function Navbar() {
       </Link>
       <div className="navbar-right">
         <ul>
-          <Navitem route="/" tittle="About Me" />
-          <Navitem route="/projects" tittle="Projects" />
-          <Navitem route="/contact" tittle="Contact Me" />
+          <Navitem route="/" tittle="About Me" isProjects={false} />
+          <Navitem route="/projects" tittle="Projects" isProjects={true} />
+          <Navitem route="/contact" tittle="Contact Me" isProjects={false} />
         </ul>
       </div>
     </nav>
   );
 }
 
-function Navitem({ route, tittle }) {
+function Navitem({ route, tittle, isProjects }) {
   const { pathname } = useLocation();
+  let projectPath = false;
+
+  if (pathname.includes("/projects")) {
+    projectPath = true;
+  }
 
   return (
     <li>
       <Link
         style={{
-          color: pathname === route ? "#ffbb00" : "",
+          color:
+            pathname === route || (projectPath && isProjects) ? "#ffbb00" : "",
         }}
         to={route}
       >

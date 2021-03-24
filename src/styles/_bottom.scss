@@ -1,0 +1,23 @@
+.bottom {
+  height: 5rem;
+  background-color: rgb(41, 41, 41);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h5 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #cccccc;
+  }
+  span {
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: normal;
+    color: white;
+  }
+
+  .icon {
+    margin-left: 10px;
+  }
+}
