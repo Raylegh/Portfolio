@@ -11,13 +11,15 @@ import ContactMe from "./pages/ContactMe.js";
 import Bottom from "./components/Bottom";
 //Router
 import { Switch, Route, useLocation } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
   const location = useLocation();
+  const [projectClick, setProjectClick] = useState("");
 
   return (
     <div className="App">
-      <Navbar />
+      <Navbar projectClick={projectClick} />
       <ScrollTop />
       <Switch location={location} key={location.pathname}>
         <Route path="/" exact>
@@ -27,7 +29,7 @@ function App() {
           <Projects />
         </Route>
         <Route path="/projects/:id">
-          <ProjectsPage />
+          <ProjectsPage projectClick={projectClick} setProjectClick={setProjectClick}/>
         </Route>
         <Route path="/contact" exact>
           <ContactMe />

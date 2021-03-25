@@ -121,3 +121,25 @@
     box-shadow: 0px 14px 20px 0px rgba(245, 191, 28, 0.377);
   }
 }
+
+//Responsive
+@media screen and (max-width: 1700px) {
+  .job-section {
+    padding: 5rem 15rem;
+  }
+}
+
+//Responsive
+@media screen and (max-width: 1250px) {
+  .job-section {
+    padding: 5rem 3rem;
+    .job-title {
+      h2 {
+        font-size: 2.5rem;
+      }
+      span {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}

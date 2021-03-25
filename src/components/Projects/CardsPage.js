@@ -3,12 +3,12 @@ import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useHistory } from "react-router-dom";
 
-const Cards = () => {
+const Cards = ({ projectClick, setProjectClick }) => {
   const history = useHistory();
   const url = history.location.pathname;
 
   const [projects, setProjects] = useState([]);
-  const [projectClick, setProjectClick] = useState("");
+
   const storageRef = app.storage().ref("images/project1");
 
   const displayImage = (imageRef) => {
@@ -62,7 +62,7 @@ const Cards = () => {
             <img
               className={`${projectClick !== "" ? "img-open" : ""}`}
               src={projectClick}
-              alt="Fashion"
+              alt=""
             />
           </div>
         </div>
@@ -78,7 +78,7 @@ const Card = ({ image, setProjectClick }) => {
 
   return (
     <div className="card" onClick={handleImage}>
-      <img src={image} alt="Fashion" />
+      <img src={image} alt="" />
     </div>
   );
 };

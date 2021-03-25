@@ -9,6 +9,7 @@
   position: sticky;
   top: 0;
   z-index: 10;
+  overflow: hidden;
   img {
     height: 50px;
     width: auto;
@@ -48,5 +49,36 @@
     transform: scaleX(1);
     transform-origin: left;
     z-index: 0;
+  }
+}
+
+.nav-bar-visible {
+  position: static;
+}
+
+//Responsive
+
+@media screen and (max-width: 1400px) {
+  .nav-bar {
+    padding: 1rem 6rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-bar {
+    li a {
+      position: absolute;
+      z-index: 1;
+      right: 0px;
+      height: 92vh;
+      top: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 60%;
+      margin-right: 0%;
+      transform: translateX(100%);
+      transition: all 0.5s ease-out;
+    }
   }
 }

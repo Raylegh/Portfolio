@@ -62,3 +62,50 @@
     }
   }
 }
+
+//Responsive
+@media screen and (max-width: 1850px) {
+  .skill-section {
+    padding: 5rem 21rem;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .skill-section {
+    padding: 5rem 18rem;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .skill-section {
+    padding: 5rem 15rem;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .skill-section {
+    padding: 5rem 12rem;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .skill-section {
+    padding: 5rem 9rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .skill-section {
+    padding: 5rem 5rem;
+    .skill-title {
+      h2 {
+        font-size: 2.5rem;
+      }
+      span {
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+    }
+    h4 {
+      font-size: 12px;
+    }
+  }
+}

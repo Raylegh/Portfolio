@@ -3,9 +3,9 @@ import logo from "../images/logo.png";
 //Router
 import { Link, useLocation } from "react-router-dom";
 
-function Navbar() {
+function Navbar({ projectClick }) {
   return (
-    <nav className="nav-bar">
+    <nav className={`nav-bar ${projectClick !== "" ? "nav-bar-visible" : ""}`}>
       <Link to="/">
         <img src={logo} alt="logo" />
       </Link>
