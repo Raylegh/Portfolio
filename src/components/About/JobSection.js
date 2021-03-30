@@ -45,6 +45,7 @@ const Experience = ({
     <div className="experience-row">
       <div className={`${isLast ? "experience-date-last" : "experience-date"}`}>
         <h5>{dateInit}</h5>
+        <h5 className="separation">-</h5>
         <h5>{dateEnd}</h5>
       </div>
       <div className="experience-box ">

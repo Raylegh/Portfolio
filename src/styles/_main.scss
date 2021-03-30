@@ -31,8 +31,17 @@
 @media screen and (max-width: 1850px) {
   .main-section {
     padding: 5rem 8rem;
+  }
+}
+
+@media screen and (max-width: 1650px) {
+  .main-section {
+    padding: 5rem 5rem;
     h2 {
       font-size: 3rem;
+    }
+    h3 {
+      font-size: 1.8rem;
     }
     p {
       font-size: 1.1rem;
@@ -47,20 +56,57 @@
 }
 
 //Responsive
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1300px) {
   .main-section {
     padding: 5rem 3rem;
     h2 {
       font-size: 2.5rem;
     }
+    h3 {
+      font-size: 1.5rem;
+    }
     p {
       font-size: 1rem;
+      padding: 1.5rem 0rem;
     }
     span {
       font-size: 2.5rem;
     }
     button {
       font-size: 0.9rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .main-section {
+    .main-about {
+      padding: 0;
+    }
+  }
+  .main-photo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .main-section {
+    padding: 2.5rem 3rem;
+    h2 {
+      font-size: 2.3rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+    }
+    p {
+      font-size: 0.8rem;
+      padding: 1.3rem 0rem;
+    }
+    span {
+      font-size: 2.3rem;
+    }
+    button {
+      font-size: 0.7rem;
     }
   }
 }

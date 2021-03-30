@@ -1,5 +1,5 @@
 .job-section {
-  min-height: 60vh;
+  min-height: 90vh;
   padding: 5rem 20rem;
 
   .job-title {
@@ -18,7 +18,6 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-top: 2rem;
     padding-right: 3rem;
 
     .job-button {
@@ -38,7 +37,7 @@
   }
 
   .experience-row {
-    margin-top: 2rem;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,7 +68,9 @@
     left: 11.2rem;
     box-shadow: 0px 14px 20px 0px rgba(245, 191, 28, 0.377);
   }
-
+  .separation {
+    display: none;
+  }
   h5 {
     font-size: 16px;
     font-weight: normal;
@@ -123,22 +124,116 @@
 }
 
 //Responsive
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 1850px) {
   .job-section {
     padding: 5rem 15rem;
   }
 }
 
-//Responsive
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1650px) {
   .job-section {
-    padding: 5rem 3rem;
+    padding: 5rem 12rem;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .job-section {
+    padding: 5rem 9rem;
     .job-title {
+      padding-bottom: 2rem;
       h2 {
         font-size: 2.5rem;
       }
       span {
         font-size: 2.5rem;
+      }
+    }
+    .job-life {
+      h5 {
+        font-size: 14px;
+      }
+      .experience-box {
+        p {
+          font-size: 12px;
+        }
+
+        h4 {
+          font-size: 18px;
+        }
+
+        h5 {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .job-section {
+    padding: 5rem 7rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .job-section {
+    form {
+      padding: 0;
+    }
+    padding: 5rem 4rem;
+    .job-life {
+      .experience-row {
+        display: block;
+      }
+      .experience-date,
+      .experience-date-last {
+        display: flex;
+        width: auto;
+        padding-bottom: 10px;
+        h5 {
+          padding-right: 15px;
+        }
+        .separation {
+          display: inline;
+        }
+      }
+      .experience-date:after {
+        display: none;
+      }
+      .experience-date-last:after {
+        display: none;
+      }
+      .experience-date:before {
+        display: none;
+      }
+      .experience-box {
+        background: #303131;
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .job-section {
+    padding: 2.5rem 3rem;
+    .job-life {
+      .experience-box {
+        padding: 25px 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .job-section {
+    .job-life {
+      .experience-date,
+      .experience-date-last {
+        h5 {
+          font-size: 12px;
+        }
       }
     }
   }

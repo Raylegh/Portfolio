@@ -15,7 +15,7 @@
   }
 
   .skills {
-    min-height: 40vh;
+    min-height: calc(40px * 8);
   }
   .skill {
     position: relative;
@@ -67,33 +67,30 @@
 @media screen and (max-width: 1850px) {
   .skill-section {
     padding: 5rem 21rem;
+    .skill {
+      margin-bottom: 30px;
+    }
   }
 }
 
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 1650px) {
   .skill-section {
-    padding: 5rem 18rem;
+    padding: 3rem 15rem;
+    padding-bottom: 5rem;
+    .skill-title {
+      padding-bottom: 3rem;
+    }
+    .skill {
+      margin-bottom: 25px;
+    }
   }
 }
-@media screen and (max-width: 1600px) {
-  .skill-section {
-    padding: 5rem 15rem;
-  }
-}
-@media screen and (max-width: 1500px) {
-  .skill-section {
-    padding: 5rem 12rem;
-  }
-}
-@media screen and (max-width: 1400px) {
+
+@media screen and (max-width: 1300px) {
   .skill-section {
     padding: 5rem 9rem;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .skill-section {
-    padding: 5rem 5rem;
     .skill-title {
+      padding-bottom: 2rem;
       h2 {
         font-size: 2.5rem;
       }
@@ -104,8 +101,39 @@
         font-size: 1.1rem;
       }
     }
-    h4 {
-      font-size: 12px;
+
+    .skill {
+      h4 {
+        font-size: 12px;
+      }
+      .note {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .skill-section {
+    padding: 5rem 7rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .skill-section {
+    padding: 5rem 4rem;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .skill-section {
+    padding: 2.5rem 3rem;
+    .skills {
+      min-height: calc(32px * 16);
+    }
+    .skill {
+      margin-bottom: 10px;
+      width: 100%;
     }
   }
 }
