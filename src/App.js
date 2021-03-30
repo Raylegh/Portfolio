@@ -11,16 +11,17 @@ import ContactMe from "./pages/ContactMe.js";
 import Bottom from "./components/Bottom";
 //Router
 import { Switch, Route, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 function App() {
   const location = useLocation();
   const [projectClick, setProjectClick] = useState("");
+  const navRef = useRef(null);
 
   return (
-    <div className="App">
-      <Navbar projectClick={projectClick} />
+    <div className="App" ref={navRef}>
       <ScrollTop />
+      <Navbar projectClick={projectClick} navRef={navRef} />
       <Switch location={location} key={location.pathname}>
         <Route path="/" exact>
           <AboutMe />
@@ -29,7 +30,10 @@ function App() {
           <Projects />
         </Route>
         <Route path="/projects/:id">
-          <ProjectsPage projectClick={projectClick} setProjectClick={setProjectClick}/>
+          <ProjectsPage
+            projectClick={projectClick}
+            setProjectClick={setProjectClick}
+          />
         </Route>
         <Route path="/contact" exact>
           <ContactMe />
