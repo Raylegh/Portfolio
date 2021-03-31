@@ -48,7 +48,7 @@
     position: absolute;
     top: 22px;
     width: 2px;
-    background-color: #eeeeee;
+    background-color: var(--jobs-bar);
     height: calc(100% + 9rem);
     left: calc(-50px + 15rem);
   }
@@ -77,7 +77,7 @@
   }
 
   .experience-box {
-    background: #303131;
+    background: var(--second-bg);
     margin-right: 3rem;
     margin-left: 6rem;
     padding: 35px 50px;
@@ -207,7 +207,6 @@
         display: none;
       }
       .experience-box {
-        background: #303131;
         margin-right: 0;
         margin-left: 0;
       }
@@ -228,6 +227,14 @@
 
 @media screen and (max-width: 500px) {
   .job-section {
+    .job-title {
+      h2 {
+        font-size: 1.8rem;
+      }
+      span {
+        font-size: 1.8rem;
+      }
+    }
     .job-life {
       .experience-date,
       .experience-date-last {

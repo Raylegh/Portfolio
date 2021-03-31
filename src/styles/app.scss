@@ -1,9 +1,30 @@
 :root {
-  --main-bg: #2b2c2c;
-  --main-txt: white;
-  --nav-bg: #3c3d3d;
-  --main-butt: #ffbb00;
-  --p-text: #cccccc;
+  //Dark
+  --dark-bg: #2b2c2c;
+  --dark-2nd-bg: #303131;
+  --dark-txt: white;
+  --dark-nav-bg: #3c3d3d;
+  --dark-butt: #ffbb00;
+  --dark-p-text: #cccccc;
+  --dark-skill: #999999;
+  --dark-jobs: #eeeeee;
+  --dark-nav-cross: #303131;
+  --dark-mode: rgb(255, 255, 98);
+  --dark-scroll: rgba(155, 155, 155, 0.7);
+  --dark-bottom: rgb(41, 41, 41);
+  //Light
+  --light-bg: rgb(228, 228, 228);
+  --light-2nd-bg: rgb(253, 253, 253);
+  --light-txt: rgb(46, 46, 46);
+  --light-nav-bg: #ffffff;
+  --light-butt: #ffbb00;
+  --light-p-text: #2e2e2e;
+  --light-skill: #383838;
+  --light-jobs: #686868;
+  --light-nav-cross: rgb(241, 241, 241);
+  --light-mode: rgb(110, 120, 255);
+  --light-scroll: rgba(48, 48, 48, 0.7);
+  --light-bottom: rgb(202, 202, 202);
 }
 
 * {
@@ -11,8 +32,7 @@
   padding: 0;
   box-sizing: border-box;
   scrollbar-width: thin;
-  scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
- 
+  scrollbar-color: rgba(155, 155, 155, 0.7) transparent;
 }
 
 html {
@@ -26,15 +46,48 @@ html {
   background: transparent;
 }
 *::-webkit-scrollbar-thumb {
-  background-color: rgba(155, 155, 155, 0.5);
+  background-color: rgba(155, 155, 155, 0.7);
   border-radius: 20px;
   border: transparent;
 }
 
-body {
+.dark-mode {
+  --main-bg: var(--dark-bg);
+  --second-bg: var(--dark-2nd-bg);
+  --main-txt: var(--dark-txt);
+  --nav-bg: var(--dark-nav-bg);
+  --main-butt: var(--dark-butt);
+  --p-text: var(--dark-p-text);
+  --skill-bar: var(--dark-skill);
+  --jobs-bar: var(--dark-jobs);
+  --nav-cross: var(--dark-nav-cross);
+  --nav-hober: var(--main-bg);
+  --mode: var(--dark-mode);
+  --scroll: var(--dark-scroll);
+  --bottom: var(--dark-bottom);
+}
+
+.light-mode {
+  --main-bg: var(--light-bg);
+  --second-bg: var(--light-2nd-bg);
+  --main-txt: var(--light-txt);
+  --nav-bg: var(--light-nav-bg);
+  --main-butt: var(--light-butt);
+  --p-text: var(--light-p-text);
+  --skill-bar: var(--light-skill);
+  --jobs-bar: var(--light-jobs);
+  --nav-cross: var(--light-nav-cross);
+  --nav-hober: var(--light-jobs);
+  --mode: var(--light-mode);
+  --scroll: var(--light-scroll);
+  --bottom: var(--light-bottom);
+}
+
+.body {
   background: var(--main-bg);
   font-family: Poppins;
   color: var(--main-txt);
+  transition: background 500ms ease-in-out, color 500ms ease-in-out;
 }
 
 button {
@@ -58,8 +111,8 @@ button {
 input,
 textarea {
   font-family: Poppins;
-  background: #303131;
-  color: #fff;
+  background: var(--second-bg);
+  color: var(--main-txt);
   border: none;
   border-radius: 6px;
 }

@@ -17,14 +17,23 @@ function App() {
   const location = useLocation();
   const [projectClick, setProjectClick] = useState("");
   const navRef = useRef(null);
+  const [darkMode, setDarkMode] = useState(true);
 
   return (
-    <div className="App" ref={navRef}>
+    <div
+      className={`body ${darkMode ? "dark-mode" : "light-mode"}`}
+      ref={navRef}
+    >
       <ScrollTop />
-      <Navbar projectClick={projectClick} navRef={navRef} />
+      <Navbar
+        projectClick={projectClick}
+        navRef={navRef}
+        setDarkMode={setDarkMode}
+        darkMode={darkMode}
+      />
       <Switch location={location} key={location.pathname}>
         <Route path="/" exact>
-          <AboutMe />
+          <AboutMe darkMode={darkMode} />
         </Route>
         <Route path="/projects" exact>
           <Projects />

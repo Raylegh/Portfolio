@@ -1,6 +1,6 @@
 .bottom {
   height: 5rem;
-  background-color: rgb(41, 41, 41);
+  background-color: var(--bottom);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,13 +8,13 @@
   h5 {
     font-size: 16px;
     font-weight: normal;
-    color: #cccccc;
+    color: var(--p-text);
   }
   span {
     margin-left: 5px;
     font-size: 16px;
     font-weight: normal;
-    color: white;
+    color: var(--main-txt);
   }
 
   .icon {

@@ -1,9 +1,11 @@
 //Images
 import AboutImage from "../../images/about.png";
-import MarketingIcon from "../../images/marketing.png";
-import FashionIcon from "../../images/fashion.png";
+import marketingIcon from "../../images/marketing.png";
+import darkMarketingIcon from "../../images/dark_marketing.png";
+import fashionIcon from "../../images/fashion.png";
+import darkFashionIcon from "../../images/dark_fashion.png";
 
-function AboutSection({ forwardedRef }) {
+function AboutSection({ forwardedRef, darkMode }) {
   return (
     <div ref={forwardedRef} className="about-main">
       <div className="about-description">
@@ -19,9 +21,12 @@ function AboutSection({ forwardedRef }) {
           </p>
         </div>
         <div className="about-cards">
-          <div className="about-card">
+          <div className="about-card about-card-first">
             <div className="about-icon">
-              <img src={MarketingIcon} alt="marketing" />
+              <img
+                src={darkMode ? marketingIcon : darkMarketingIcon}
+                alt="marketing"
+              />
               <h4>Marketing</h4>
             </div>
             <p>
@@ -33,7 +38,10 @@ function AboutSection({ forwardedRef }) {
           </div>
           <div className="about-card">
             <div className="about-icon">
-              <img src={FashionIcon} alt="fashion" />
+              <img
+                src={darkMode ? fashionIcon : darkFashionIcon}
+                alt="fashion"
+              />
               <h4>Design</h4>
             </div>
             <p>
