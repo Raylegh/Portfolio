@@ -1,10 +1,10 @@
 //Pages
 import Cards from "../components/Projects/Cards";
 
-function Projects() {
+function Projects({ isLoading, setIsLoading }) {
   return (
     <>
-      <Cards />
+      <Cards setIsLoading={setIsLoading} isLoading={isLoading} />
     </>
   );
 }

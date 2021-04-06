@@ -3,12 +3,11 @@ import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useHistory } from "react-router-dom";
 
-const Cards = ({ projectClick, setProjectClick }) => {
+const Cards = ({ projectClick, setProjectClick, setIsLoading, isLoading }) => {
   const history = useHistory();
   const url = history.location.pathname;
 
   const [projects, setProjects] = useState([]);
-
   const storageRef = app.storage().ref("images/project1");
 
   const displayImage = (imageRef) => {
@@ -18,11 +17,13 @@ const Cards = ({ projectClick, setProjectClick }) => {
   };
 
   useEffect(() => {
+    setIsLoading(true);
     storageRef.listAll().then(function (result) {
       result.items.forEach(function (imageRef) {
         displayImage(imageRef);
       });
     });
+    setTimeout(() => setIsLoading(false), 2500);
   }, []);
 
   const handleRemoveImage = (e) => {
@@ -33,7 +34,7 @@ const Cards = ({ projectClick, setProjectClick }) => {
 
   return (
     <>
-      {projects && (
+      {!isLoading && (
         <div className="card-section">
           <div className="title-center">
             <div className="card-title">

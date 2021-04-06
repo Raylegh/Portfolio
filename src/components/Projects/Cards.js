@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { Link } from "react-router-dom";
 
-const Cards = () => {
+const Cards = ({ isLoading, setIsLoading }) => {
   const [projects, setProjects] = useState([]);
   const storageRef = app.storage().ref("images");
   const project1 = storageRef.child("project1.jpg");
@@ -12,6 +12,7 @@ const Cards = () => {
   const project4 = storageRef.child("project4.jpg");
 
   useEffect(() => {
+    setIsLoading(true);
     const displayImage = async (imageRef, name, type) => {
       await imageRef.getDownloadURL().then(function (imgUrl) {
         setProjects((projects) => [
@@ -30,11 +31,12 @@ const Cards = () => {
     displayImage(project2, "Fucking Young2", "Stylisim");
     displayImage(project3, "Fucking Young3", "Stylisim");
     displayImage(project4, "Fucking Young4", "Stylisim");
+    setTimeout(() => setIsLoading(false), 1000);
   }, []);
 
   return (
     <>
-      {projects && (
+      {!isLoading && (
         <div className="card-section">
           <div className="title-center">
             <div className="card-title">
@@ -53,6 +55,7 @@ const Cards = () => {
                   url={project.url}
                   imagetype={project.type}
                   title={project.name}
+                  setIsLoading={setIsLoading}
                 />
               );
             })}
@@ -63,9 +66,13 @@ const Cards = () => {
   );
 };
 
-const Card = ({ image, title, imagetype, url }) => {
+const Card = ({ image, title, imagetype, url, setIsLoading }) => {
+  const handleLoading = () => {
+    console.log(setIsLoading);
+  };
+
   return (
-    <div className="card">
+    <div className="card" onClick={handleLoading}>
       <Link to={url}>
         <img src={image} alt="style" />
         <div className="card-content">
